@@ -1,0 +1,70 @@
+{
+    "name":"Alerter",
+    "version":"0.0.1",
+    "author":"Joseph Lamoree",
+    "location":"ecivis/alerter#v0.0.1",
+    "homepage":"https://github.com/ecivis/alerter",
+    "documentation":"https://github.com/ecivis/alerter",
+    "repository":{
+        "type":"git",
+        "URL":"https://github.com/ecivis/alerter"
+    },
+    "bugs":"https://github.com/ecivis/alerter/issues",
+    "slug":"alerter",
+    "shortDescription":"Alerter for error notifications",
+    "description":"A ColdBox Module for alerting on exception.",
+    "instructions":"",
+    "changelog":"",
+    "type":"modules",
+    "keywords":[
+        "alerter",
+        "exceptions",
+        "devtool"
+    ],
+    "private":false,
+    "projectURL":"https://github.com/ecivis/alerter",
+    "license":[
+        {
+            "type":"MIT",
+            "URL":"https://raw.githubusercontent.com/ecivis/alerter/master/LICENSE.txt"
+        }
+    ],
+    "contributors":[
+
+    ],
+    "dependencies":{
+
+    },
+    "devDependencies":{
+        "testbox":"^2.5.0+107"
+    },
+    "installPaths":{
+        "testbox":"testbox"
+    },
+    "scripts":{
+
+    },
+    "ignore":[
+        "**/.*",
+        "test",
+        "tests"
+    ],
+    "testbox":{
+        "runner":[
+            {
+                "default":"http://${SERVER_HOST:127.0.0.1}:${SERVER_PORT:61007}/tests/runner.cfm"
+            }
+        ],
+        "labels":"",
+        "reporter":"text",
+        "bundles":"",
+        "recurse":true,
+        "directory":"tests.specs",
+        "testBundles":"",
+        "testSuites":"",
+        "testSpecs":"",
+        "verbose":false,
+        "watchDelay":500,
+        "watchPaths":"**.cfc"
+    }
+}
