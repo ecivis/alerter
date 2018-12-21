@@ -18,8 +18,8 @@ component singleton {
     public void function exceptionAlert(required struct exception, string template="default", struct extras={}) {
         var file = "";
         var data = {};
-        var tp = "null";
-        var mailService = "null";
+        var templateProcessor = "null";
+        var mailerService = "null";
 
         if (!variables.config.mail.templates.keyExists(arguments.template)) {
             throw(type="alerter.UnknownTemplateException", message="A template named '#arguments.template#' was not found in Alerter configuration settings.");
@@ -32,7 +32,7 @@ component singleton {
 
         data["exception"] = arguments.exception;
         data.append(arguments.extras);
-        tp = new TemplateProcessor(data);
+        templateProcessor = new TemplateProcessor(data);
 
         mailerService = new Mail(from=variables.config.mail.from, to=variables.config.mail.to, subject=variables.config.mail.subject, type="text/html");
         if (variables.config.mail.keyExists("server")) {
@@ -43,7 +43,7 @@ component singleton {
                 mailerService.setPort(variables.config.mail.server.port);
             }
         }
-        mailerService.setBody(tp.process(file));
+        mailerService.setBody(templateProcessor.process(file));
         mailerService.send();
     }
 

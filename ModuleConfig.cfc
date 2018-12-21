@@ -4,7 +4,7 @@ component {
     this.author = "Joseph Lamoree";
     this.webURL = "https://github.com/ecivis/alerter";
     this.description = "A ColdBox Module for alerting on exception.";
-    this.version = "0.0.1";
+    this.version = "0.0.2";
     this.dependencies = [];
     this.autoMapModels = false;
     this.cfmapping = "alerter";

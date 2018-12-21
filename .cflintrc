@@ -1,0 +1,16 @@
+{
+	"excludes": [
+		{
+			"code": "COMPONENT_HINT_MISSING"
+		},
+		{
+			"code": "STRUCT_ARRAY_NOTATION"
+		},
+		{
+			"code": "VAR_TOO_SHORT"
+		},
+		{
+			"code": "GLOBAL_VAR"
+		}
+	]
+}
